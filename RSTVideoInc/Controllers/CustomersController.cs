@@ -28,8 +28,8 @@ namespace RSTVideoInc.Controllers
         {
             return new List<Customer>
             {
-                new Customer {Id = 1, Name = "Ricky Ricardo"},
-                new Customer {Id = 2, Name = "Desi Arnaz"}
+                new Customer { Id = 1, Name = "Lucille Désirée Ball" },
+                new Customer { Id = 2, Name = "Desi Arnaz" }
             };
         }
     }
