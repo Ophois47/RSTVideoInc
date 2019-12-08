@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 using RSTVideoInc.Models;
-using System.Data.Entity;
 
 namespace RSTVideoInc.Controllers
 {
