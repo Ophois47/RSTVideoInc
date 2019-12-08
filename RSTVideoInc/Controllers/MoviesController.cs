@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using RSTVideoInc.Models;
+using RSTVideoInc.ViewModels;
 
 namespace RSTVideoInc.Controllers
 {
@@ -13,8 +14,19 @@ namespace RSTVideoInc.Controllers
         public ActionResult Random()
         {
             var movie = new Movie() {Name = "Happy Scrappy Hero Pup"};
+            var customers = new List<Customer>
+            {
+                new Customer {Name = "Customer 1"},
+                new Customer {Name = "Customer 2"}
+            };
 
-            return View(movie);
+            var viewModel = new RandomMovieViewModel
+            {
+                Movie = movie,
+                Customers = customers
+            };
+
+            return View(viewModel);
         }
     }
 }
