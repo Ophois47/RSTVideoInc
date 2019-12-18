@@ -9,7 +9,8 @@ namespace RSTVideoInc.Models
     public class Customer
     {
         public int Id { get; set; }
-        [Required]
+
+        [Required(ErrorMessage = "What I Supposed To Call You?!")]
         [StringLength(255)]
         public string Name { get; set; }
 
@@ -17,10 +18,12 @@ namespace RSTVideoInc.Models
 
         public MembershipType MembershipType { get; set; }
 
+        [Required(ErrorMessage = "Remember, Remember! It Pays To Be A Member.")]
         [Display(Name = "Membership Type")]
         public byte MembershipTypeId { get; set; }
 
         [Display(Name = "Date of Birth")]
+        [Min18YearsIfAMember]
         public DateTime? Birthdate { get; set; }
     }
 }
